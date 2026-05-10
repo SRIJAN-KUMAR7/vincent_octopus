@@ -48,7 +48,7 @@ class VoiceAnalyzer:
             model_size: Model size ('tiny', 'base', 'small', 'medium', 'large')
         """
         print(f"Loading Whisper {model_size} model (FP32 mode)...")
-        print("⚠️  Note: FP32 is slower but more compatible")
+        print("Warning: FP32 is slower but more compatible")
         
         try:
             # Load on CPU with float32
@@ -58,12 +58,12 @@ class VoiceAnalyzer:
             self.whisper_model.eval()
             self.whisper_model = self.whisper_model.float()
             
-            print("✅ Whisper model loaded successfully in FP32 mode!")
+            print("Whisper model loaded successfully in FP32 mode!")
             print(f"   Device: CPU")
             print(f"   Precision: Float32\n")
             
         except Exception as e:
-            print(f"❌ Error loading model: {str(e)}")
+            print(f"Error loading model: {str(e)}")
             print("Try installing latest Whisper: pip install --upgrade openai-whisper")
             raise
         
@@ -89,7 +89,7 @@ class VoiceAnalyzer:
             frames_per_buffer=chunk_size
         )
         
-        print(f"\n🎤 Recording for {duration} seconds... Please speak your introduction.")
+        print(f"\nRecording for {duration} seconds... Please speak your introduction.")
         print("(Press Ctrl+C to stop early)\n")
         
         frames = []
@@ -103,13 +103,13 @@ class VoiceAnalyzer:
                 progress = int((elapsed / duration) * 20)
                 print(f"[{'█' * progress}{'░' * (20 - progress)}] {elapsed:.1f}s", end='\r')
         except KeyboardInterrupt:
-            print("\n⏹️  Recording stopped early")
+            print("\nRecording stopped early")
         
         stream.stop_stream()
         stream.close()
         p.terminate()
         
-        print("\n✅ Recording complete!\n")
+        print("\nRecording complete!\n")
         return np.concatenate(frames)
     
     def transcribe_audio(self, audio_data):
@@ -125,7 +125,7 @@ class VoiceAnalyzer:
         if self.whisper_model is None:
             self.load_whisper_model()
         
-        print("🔄 Transcribing audio with Whisper (FP32)...")
+        print("Transcribing audio with Whisper (FP32)...")
         print("   This may take a minute or two...\n")
         
         try:
@@ -156,11 +156,11 @@ class VoiceAnalyzer:
                     language="en"
                 )
             
-            print("✅ Transcription complete!\n")
+            print("Transcription complete!\n")
             return result
             
         except Exception as e:
-            print(f"❌ Error during transcription: {str(e)}")
+            print(f"Error during transcription: {str(e)}")
             print("\nTrying alternative transcription method...\n")
             
             try:
@@ -173,10 +173,10 @@ class VoiceAnalyzer:
                         beam_size=1,
                         temperature=0.0
                     )
-                print("✅ Transcription complete!\n")
+                print("Transcription complete!\n")
                 return result
             except Exception as e2:
-                print(f"❌ Transcription failed: {str(e2)}")
+                print(f"Transcription failed: {str(e2)}")
                 print("\n💡 Workaround: Saving audio file and using file-based transcription...")
                 
                 # Save audio temporarily and transcribe
@@ -190,10 +190,10 @@ class VoiceAnalyzer:
                         verbose=False
                     )
                     os.remove(temp_audio)
-                    print("✅ Transcription complete!\n")
+                    print("Transcription complete!\n")
                     return result
                 except Exception as e3:
-                    print(f"❌ All transcription methods failed: {str(e3)}")
+                    print(f"All transcription methods failed: {str(e3)}")
                     if os.path.exists(temp_audio):
                         os.remove(temp_audio)
                     raise
@@ -208,7 +208,7 @@ class VoiceAnalyzer:
         Returns:
             Dictionary of metrics
         """
-        print("📊 Analyzing voice metrics...")
+        print("Analyzing voice metrics...")
         
         metrics = {}
         
@@ -267,7 +267,7 @@ class VoiceAnalyzer:
         peak_amplitude = np.max(np.abs(audio_data))
         metrics['peak_amplitude'] = round(float(peak_amplitude), 4)
         
-        print("✅ Metrics analysis complete!\n")
+        print("Metrics analysis complete!\n")
         return metrics
     
     def _detect_pauses(self, audio_data, min_duration=0.3, silence_threshold=0.01):
@@ -340,7 +340,7 @@ class VoiceAnalyzer:
         with open(output_file, 'w') as f:
             json.dump(results, f, indent=2)
         
-        print(f"📄 Results saved to {output_file}\n")
+        print(f"Results saved to {output_file}\n")
         return output_file
     
     def print_report(self, transcription, metrics):
@@ -349,32 +349,32 @@ class VoiceAnalyzer:
         print(" " * 15 + "VOICE ANALYSIS REPORT")
         print("="*70)
         
-        print("\n📝 TRANSCRIPTION:")
+        print("\nTRANSCRIPTION:")
         print("-" * 70)
         print(f"{transcription['text']}\n")
         
-        print("📊 VOICE METRICS:")
+        print("VOICE METRICS:")
         print("-" * 70)
         
         # Duration and Speaking
-        print(f"\n⏱️  TIMING METRICS:")
+        print(f"\nTIMING METRICS:")
         print(f"   Duration:              {metrics['duration_seconds']} seconds")
         print(f"   Speaking Rate (WPM):   {metrics['estimated_wpm']} words/minute")
         print(f"   Voice Clarity:         {metrics['voice_clarity_percentage']}%")
         
         # Pauses
-        print(f"\n⏸️  PAUSE METRICS:")
+        print(f"\nPAUSE METRICS:")
         print(f"   Number of Pauses:      {metrics['number_of_pauses']}")
         print(f"   Avg Pause Duration:    {metrics['average_pause_duration']} seconds")
         print(f"   Total Pause Time:      {metrics['total_pause_duration']} seconds")
         
         # Silence
-        print(f"\n🔇 SILENCE METRICS:")
+        print(f"\nSILENCE METRICS:")
         print(f"   Silence Ratio:         {metrics['silence_ratio']}")
         print(f"   Silence Percentage:    {metrics['silence_percentage']}%")
         
         # Energy and Noise
-        print(f"\n🔊 AUDIO QUALITY:")
+        print(f"\nAUDIO QUALITY:")
         print(f"   RMS Energy:            {metrics['rms_energy']}")
         print(f"   Loudness:              {metrics['loudness_db']} dB")
         print(f"   Peak Amplitude:        {metrics['peak_amplitude']}")
@@ -382,7 +382,7 @@ class VoiceAnalyzer:
         print(f"   Noise (dB):            {metrics['noise_db']} dB")
         
         # Frequency Characteristics
-        print(f"\n🎵 FREQUENCY CHARACTERISTICS:")
+        print(f"\nFREQUENCY CHARACTERISTICS:")
         print(f"   Spectral Centroid:     {metrics['spectral_centroid_hz']} Hz")
         if metrics['estimated_pitch_hz'] != "N/A":
             print(f"   Estimated Pitch:       {metrics['estimated_pitch_hz']} Hz")
@@ -395,7 +395,7 @@ class VoiceAnalyzer:
 def main():
     """Main program"""
     print("\n" + "="*70)
-    print(" " * 10 + "🎤 VOICE INTRODUCTION ANALYZER 🎤")
+    print(" " * 10 + "VOICE INTRODUCTION ANALYZER")
     print(" " * 10 + "Windows Compatible (No FFmpeg Required)")
     print("="*70)
     print("\nThis program will:")
@@ -413,10 +413,10 @@ def main():
         analyzer.load_whisper_model(model_size="base")
         
         # Get user info
-        name = input("📝 Please enter your name: ").strip()
-        topic = input("📝 What is your introduction topic/subject?: ").strip()
+        name = input("Please enter your name: ").strip()
+        topic = input("What is your introduction topic/subject?: ").strip()
         
-        print(f"\n✨ Hello {name}! Please prepare to give your introduction about: {topic}")
+        print(f"\nHello {name}! Please prepare to give your introduction about: {topic}")
         input("Press Enter when you're ready to start recording...\n")
         
         # Record audio
@@ -426,7 +426,7 @@ def main():
         timestamp = datetime.now().strftime('%Y%m%d_%H%M%S')
         audio_file = f"voice_recording_{timestamp}.wav"
         sf.write(audio_file, audio_data, analyzer.sample_rate)
-        print(f"💾 Audio saved to {audio_file}\n")
+        print(f"Audio saved to {audio_file}\n")
         
         # Transcribe (pass numpy array directly, no file needed!)
         transcription = analyzer.transcribe_audio(audio_data)
@@ -440,15 +440,15 @@ def main():
         # Save results
         analyzer.save_results(audio_file, transcription, metrics)
         
-        print("✅ Analysis complete! Check the JSON file for detailed metrics.")
+        print("Analysis complete! Check the JSON file for detailed metrics.")
         
     except KeyboardInterrupt:
-        print("\n\n⏹️  Program interrupted by user")
+        print("\n\nProgram interrupted by user")
     except Exception as e:
-        print(f"\n❌ Error: {str(e)}")
+        print(f"\nError: {str(e)}")
         import traceback
         traceback.print_exc()
-        print("\n💡 Troubleshooting tips:")
+        print("\nTroubleshooting tips:")
         print("   - Make sure you have the latest Whisper: pip install --upgrade openai-whisper")
         print("   - Check your PyAudio installation")
         print("   - Windows users: FFmpeg is NOT required with this version")

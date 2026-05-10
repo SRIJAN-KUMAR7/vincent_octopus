@@ -24,7 +24,7 @@ class VoiceVisualizer:
         self.metrics = metrics_json
         self.y, self.sr = librosa.load(audio_file, sr=16000)
         self.sample_rate = 16000
-        print(f"✅ Loaded audio file: {audio_file}")
+        print(f"Loaded audio file: {audio_file}")
         
     @staticmethod
     def load_metrics_json(json_file):
@@ -34,7 +34,7 @@ class VoiceVisualizer:
     
     def create_comprehensive_visualization(self, output_file=None):
         """Create comprehensive visualization dashboard"""
-        print("📊 Creating comprehensive visualization...")
+        print("Creating comprehensive visualization...")
         
         fig = plt.figure(figsize=(16, 12))
         
@@ -83,11 +83,11 @@ class VoiceVisualizer:
             plt.savefig(output_file, dpi=300, bbox_inches='tight')
             plt.close(fig)  # Close figure to free memory
             
-            print(f"✅ Visualization saved to {output_file}")
+            print(f"Visualization saved to {output_file}")
             return output_file
             
         except Exception as e:
-            print(f"❌ Error creating visualization: {str(e)}")
+            print(f"Error creating visualization: {str(e)}")
             plt.close(fig)
             raise
     
@@ -100,7 +100,7 @@ class VoiceVisualizer:
             ax.set_ylabel('Amplitude')
             ax.grid(True, alpha=0.3)
         except Exception as e:
-            print(f"⚠️  Warning in waveform plot: {str(e)}")
+            print(f"Warning in waveform plot: {str(e)}")
     
     def _plot_spectrogram(self, ax):
         """Plot spectrogram"""
@@ -112,7 +112,7 @@ class VoiceVisualizer:
             ax.set_ylabel('Frequency (Hz)')
             plt.colorbar(img, ax=ax, format='%+2.0f dB')
         except Exception as e:
-            print(f"⚠️  Warning in spectrogram plot: {str(e)}")
+            print(f"Warning in spectrogram plot: {str(e)}")
     
     def _plot_mel_spectrogram(self, ax):
         """Plot mel-scaled spectrogram"""
@@ -124,7 +124,7 @@ class VoiceVisualizer:
             ax.set_ylabel('Mel Frequency')
             plt.colorbar(img, ax=ax, format='%+2.0f dB')
         except Exception as e:
-            print(f"⚠️  Warning in mel spectrogram plot: {str(e)}")
+            print(f"Warning in mel spectrogram plot: {str(e)}")
     
     def _plot_rms_energy(self, ax):
         """Plot RMS energy"""
@@ -140,7 +140,7 @@ class VoiceVisualizer:
             ax.set_ylabel('Energy')
             ax.grid(True, alpha=0.3)
         except Exception as e:
-            print(f"⚠️  Warning in RMS energy plot: {str(e)}")
+            print(f"Warning in RMS energy plot: {str(e)}")
     
     def _plot_zero_crossing_rate(self, ax):
         """Plot zero crossing rate"""
@@ -155,7 +155,7 @@ class VoiceVisualizer:
             ax.set_ylabel('ZCR')
             ax.grid(True, alpha=0.3)
         except Exception as e:
-            print(f"⚠️  Warning in ZCR plot: {str(e)}")
+            print(f"Warning in ZCR plot: {str(e)}")
     
     def _plot_spectral_centroid(self, ax):
         """Plot spectral centroid"""
@@ -170,7 +170,7 @@ class VoiceVisualizer:
             ax.set_ylabel('Frequency (Hz)')
             ax.grid(True, alpha=0.3)
         except Exception as e:
-            print(f"⚠️  Warning in spectral centroid plot: {str(e)}")
+            print(f"Warning in spectral centroid plot: {str(e)}")
     
     def _plot_mfcc(self, ax):
         """Plot MFCC"""
@@ -181,7 +181,7 @@ class VoiceVisualizer:
             ax.set_ylabel('MFCC Coefficient')
             plt.colorbar(img, ax=ax)
         except Exception as e:
-            print(f"⚠️  Warning in MFCC plot: {str(e)}")
+            print(f"Warning in MFCC plot: {str(e)}")
     
     def _plot_chromagram(self, ax):
         """Plot chromagram"""
@@ -192,7 +192,7 @@ class VoiceVisualizer:
             ax.set_ylabel('Note')
             plt.colorbar(img, ax=ax)
         except Exception as e:
-            print(f"⚠️  Warning in chromagram plot: {str(e)}")
+            print(f"Warning in chromagram plot: {str(e)}")
     
     def _plot_metrics_summary(self, ax):
         """Plot metrics summary as text"""
@@ -227,13 +227,13 @@ ZCR: {self.metrics['metrics'].get('zero_crossing_rate', 'N/A')}
     
     def create_metrics_comparison_chart(self, output_file=None):
         """Create metrics comparison chart"""
-        print("📊 Creating metrics comparison chart...")
+        print("Creating metrics comparison chart...")
         
         fig, axes = plt.subplots(2, 2, figsize=(14, 10))
         
         try:
             if not self.metrics:
-                print("❌ No metrics data available")
+                print("No metrics data available")
                 plt.close(fig)
                 return
             
@@ -302,21 +302,21 @@ ZCR: {self.metrics['metrics'].get('zero_crossing_rate', 'N/A')}
             plt.savefig(output_file, dpi=300, bbox_inches='tight')
             plt.close(fig)
             
-            print(f"✅ Comparison chart saved to {output_file}")
+            print(f"Comparison chart saved to {output_file}")
             return output_file
             
         except Exception as e:
-            print(f"❌ Error creating comparison chart: {str(e)}")
+            print(f"Error creating comparison chart: {str(e)}")
             plt.close(fig)
             raise
     
     def create_simple_metrics_chart(self, output_file=None):
         """Create a simple metrics chart without complex visualization"""
-        print("📊 Creating simple metrics chart...")
+        print("Creating simple metrics chart...")
         
         try:
             if not self.metrics:
-                print("❌ No metrics data available")
+                print("No metrics data available")
                 return
             
             m = self.metrics['metrics']
@@ -329,28 +329,28 @@ ZCR: {self.metrics['metrics'].get('zero_crossing_rate', 'N/A')}
 ║           VOICE ANALYSIS METRICS SUMMARY              ║
 ╚══════════════════════════════════════════════════════╝
 
-📊 TIMING METRICS
+TIMING METRICS
    Duration:              {m.get('duration_seconds', 'N/A')} seconds
    Speaking Rate (WPM):   {m.get('estimated_wpm', 'N/A')} words/minute
    Voice Clarity:         {m.get('voice_clarity_percentage', 'N/A')}%
 
-⏸️  PAUSE METRICS
+PAUSE METRICS
    Number of Pauses:      {m.get('number_of_pauses', 'N/A')}
    Avg Pause Duration:    {m.get('average_pause_duration', 'N/A')} seconds
    Total Pause Time:      {m.get('total_pause_duration', 'N/A')} seconds
 
-🔇 SILENCE METRICS
+SILENCE METRICS
    Silence Ratio:         {m.get('silence_ratio', 'N/A')}
    Silence Percentage:    {m.get('silence_percentage', 'N/A')}%
 
-🔊 AUDIO QUALITY
+AUDIO QUALITY
    RMS Energy:            {m.get('rms_energy', 'N/A')}
    Loudness:              {m.get('loudness_db', 'N/A')} dB
    Peak Amplitude:        {m.get('peak_amplitude', 'N/A')}
    Noise Level:           {m.get('noise_level', 'N/A')}
    Noise (dB):            {m.get('noise_db', 'N/A')} dB
 
-🎵 FREQUENCY CHARACTERISTICS
+FREQUENCY CHARACTERISTICS
    Spectral Centroid:     {m.get('spectral_centroid_hz', 'N/A')} Hz
    Estimated Pitch:       {m.get('estimated_pitch_hz', 'N/A')} Hz
    Zero Crossing Rate:    {m.get('zero_crossing_rate', 'N/A')}
@@ -369,11 +369,11 @@ ZCR: {self.metrics['metrics'].get('zero_crossing_rate', 'N/A')}
             plt.savefig(output_file, dpi=300, bbox_inches='tight')
             plt.close(fig)
             
-            print(f"✅ Metrics summary saved to {output_file}")
+            print(f"Metrics summary saved to {output_file}")
             return output_file
             
         except Exception as e:
-            print(f"❌ Error creating metrics summary: {str(e)}")
+            print(f"Error creating metrics summary: {str(e)}")
             raise
 
 
@@ -385,27 +385,27 @@ def main():
     print("="*70 + "\n")
     
     # Find recent analysis files
-    audio_file = input("📁 Enter path to audio file (or press Enter to find recent): ").strip()
+    audio_file = input("Enter path to audio file (or press Enter to find recent): ").strip()
     
     if not audio_file or not Path(audio_file).exists():
         # Find most recent audio file
         audio_files = list(Path('.').glob('voice_recording_*.wav'))
         if audio_files:
             audio_file = str(sorted(audio_files)[-1])
-            print(f"📂 Using recent file: {audio_file}\n")
+            print(f"Using recent file: {audio_file}\n")
         else:
-            print("❌ No audio file found!")
+            print("No audio file found!")
             return
     
     # Find corresponding metrics
-    metrics_file = input("📊 Enter path to metrics JSON (or press Enter for auto-detect): ").strip()
+    metrics_file = input("Enter path to metrics JSON (or press Enter for auto-detect): ").strip()
     
     if not metrics_file or not Path(metrics_file).exists():
         # Find most recent metrics file
         metrics_files = list(Path('.').glob('voice_analysis_*.json'))
         if metrics_files:
             metrics_file = str(sorted(metrics_files)[-1])
-            print(f"📂 Using metrics file: {metrics_file}\n")
+            print(f"Using metrics file: {metrics_file}\n")
         else:
             metrics_file = None
     
@@ -413,45 +413,45 @@ def main():
     metrics = None
     if metrics_file:
         metrics = VoiceVisualizer.load_metrics_json(metrics_file)
-        print(f"✅ Loaded metrics from {metrics_file}\n")
+        print(f"Loaded metrics from {metrics_file}\n")
     
     # Create visualizer
     try:
         visualizer = VoiceVisualizer(audio_file, metrics)
         
-        print("🎨 Creating visualizations...\n")
+        print("Creating visualizations...\n")
         
         # Create comprehensive visualization
         try:
             viz_file = visualizer.create_comprehensive_visualization()
         except Exception as e:
-            print(f"⚠️  Could not create comprehensive visualization: {str(e)}")
+            print(f"Could not create comprehensive visualization: {str(e)}")
             viz_file = None
         
         # Create comparison charts
         try:
             comp_file = visualizer.create_metrics_comparison_chart()
         except Exception as e:
-            print(f"⚠️  Could not create comparison chart: {str(e)}")
+            print(f"Could not create comparison chart: {str(e)}")
             comp_file = None
         
         # Always create metrics summary
         try:
             summary_file = visualizer.create_simple_metrics_chart()
         except Exception as e:
-            print(f"⚠️  Could not create metrics summary: {str(e)}")
+            print(f"Could not create metrics summary: {str(e)}")
             summary_file = None
         
-        print("\n✅ Visualization complete!")
+        print("\nVisualization complete!")
         if viz_file:
-            print(f"   📊 Comprehensive: {viz_file}")
+            print(f"   Comprehensive: {viz_file}")
         if comp_file:
-            print(f"   📈 Comparison: {comp_file}")
+            print(f"   Comparison: {comp_file}")
         if summary_file:
-            print(f"   📋 Summary: {summary_file}")
+            print(f"   Summary: {summary_file}")
         
     except Exception as e:
-        print(f"❌ Error: {str(e)}")
+        print(f"Error: {str(e)}")
         import traceback
         traceback.print_exc()
 
