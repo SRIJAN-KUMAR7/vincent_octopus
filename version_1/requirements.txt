@@ -1,0 +1,14 @@
+openai-whisper
+librosa>=0.10.0
+soundfile>=0.12.0
+pyaudio>=0.2.13
+
+# Numerical Computing
+numpy>=1.21.0
+scipy>=1.7.0
+
+# Visualization (Optional, required for voice_visualizer.py)
+matplotlib>=3.5.0
+
+# Audio Format Support
+audioread>=3.0.0

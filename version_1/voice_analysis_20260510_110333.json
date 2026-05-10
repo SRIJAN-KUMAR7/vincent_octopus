@@ -1,0 +1,26 @@
+{
+  "timestamp": "2026-05-10T11:03:33.773354",
+  "audio_file": "voice_recording_20260510_110326.wav",
+  "transcription": " Hello, my name is Rijan Kumar. Hello, hello, my name is Rijan Kumar. I am testing this application. My friends are well done.",
+  "language": "en",
+  "metrics": {
+    "duration_seconds": 9.98,
+    "rms_energy": 0.0458,
+    "loudness_db": -26.78,
+    "silence_ratio": 0.497,
+    "silence_percentage": 49.7,
+    "number_of_pauses": 2,
+    "average_pause_duration": 0.97,
+    "total_pause_duration": 1.95,
+    "noise_level": 0.3949,
+    "noise_db": -8.07,
+    "spectral_centroid_hz": 1903.04,
+    "zero_crossing_rate": 0.1403,
+    "mfcc_mean": -26.6109,
+    "estimated_pitch_hz": 144.14,
+    "estimated_wpm": 70.4,
+    "voice_clarity_percentage": 50.3,
+    "peak_amplitude": 0.5046
+  },
+  "note": "Windows Compatible Version - FP32 Precision"
+}

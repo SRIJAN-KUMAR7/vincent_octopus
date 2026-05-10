@@ -1,0 +1,26 @@
+{
+  "timestamp": "2026-05-10T10:54:14.117684",
+  "audio_file": "voice_recording_20260510_105239.wav",
+  "transcription": " They have never been the sort of person to upstairs over keyboard apps. A keyboard is a keyboard like well, keyboard has always said on the bottom of my screen auto correcting my tyco then suggesting the word with an almost unsatting courtesy. The problem with that unsatting accuracy it burns out it exactly that shit.",
+  "language": "en",
+  "metrics": {
+    "duration_seconds": 29.95,
+    "rms_energy": 0.0323,
+    "loudness_db": -29.8,
+    "silence_ratio": 0.5532,
+    "silence_percentage": 55.32,
+    "number_of_pauses": 5,
+    "average_pause_duration": 1.1,
+    "total_pause_duration": 5.49,
+    "noise_level": 0.428,
+    "noise_db": -7.37,
+    "spectral_centroid_hz": 2350.39,
+    "zero_crossing_rate": 0.1808,
+    "mfcc_mean": -30.9723,
+    "estimated_pitch_hz": 155.34,
+    "estimated_wpm": 62.6,
+    "voice_clarity_percentage": 44.68,
+    "peak_amplitude": 0.3324
+  },
+  "note": "Windows Compatible Version - FP32 Precision"
+}

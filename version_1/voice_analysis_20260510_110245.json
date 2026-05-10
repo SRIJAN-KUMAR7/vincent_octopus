@@ -1,0 +1,26 @@
+{
+  "timestamp": "2026-05-10T11:02:45.545130",
+  "audio_file": "voice_recording_20260510_110239.wav",
+  "transcription": " Um, uh,",
+  "language": "en",
+  "metrics": {
+    "duration_seconds": 9.98,
+    "rms_energy": 0.0182,
+    "loudness_db": -34.82,
+    "silence_ratio": 0.8496,
+    "silence_percentage": 84.96,
+    "number_of_pauses": 4,
+    "average_pause_duration": 1.78,
+    "total_pause_duration": 7.12,
+    "noise_level": 0.3838,
+    "noise_db": -8.32,
+    "spectral_centroid_hz": 3092.59,
+    "zero_crossing_rate": 0.1988,
+    "mfcc_mean": -43.8374,
+    "estimated_pitch_hz": 141.59,
+    "estimated_wpm": 21.1,
+    "voice_clarity_percentage": 15.04,
+    "peak_amplitude": 0.2336
+  },
+  "note": "Windows Compatible Version - FP32 Precision"
+}
