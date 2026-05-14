@@ -1,0 +1,26 @@
+{
+  "timestamp": "2026-05-14T19:36:02.600812",
+  "audio_file": "voice_recording_20260514_193526.wav",
+  "transcription": " So hello my name is Rijim Kumar here are some creative name ideas for your interview business today. Professional and trust over the idea.",
+  "language": "en",
+  "metrics": {
+    "duration_seconds": 9.98,
+    "rms_energy": 0.0078,
+    "loudness_db": -42.13,
+    "silence_ratio": 0.8267,
+    "silence_percentage": 82.67,
+    "number_of_pauses": 2,
+    "average_pause_duration": 1.41,
+    "total_pause_duration": 2.83,
+    "noise_level": 0.4108,
+    "noise_db": -7.73,
+    "spectral_centroid_hz": 1971.13,
+    "zero_crossing_rate": 0.1257,
+    "mfcc_mean": -36.749,
+    "estimated_pitch_hz": 115.94,
+    "estimated_wpm": 24.3,
+    "voice_clarity_percentage": 17.33,
+    "peak_amplitude": 0.0529
+  },
+  "note": "Windows Compatible Version - FP32 Precision"
+}

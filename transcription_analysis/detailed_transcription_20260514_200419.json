@@ -1,0 +1,350 @@
+{
+  "metadata": {
+    "timestamp": "2026-05-14T20:04:19.553585",
+    "audio_file": "voice_recording_20260514_193526.wav",
+    "audio_duration_seconds": 9.98,
+    "language": "en",
+    "model_size": "base",
+    "transcription_date": "2026-05-14 20:04:19"
+  },
+  "transcription": {
+    "full_text": " So hello my name is Rijim Kumar here are some creative name ideas for your interview business today. Professional and trust over the idea.",
+    "word_level": [
+      {
+        "word_index": 0,
+        "word": "So",
+        "start_time": 0.0,
+        "end_time": 0.424,
+        "duration": 0.424,
+        "segment_index": 0,
+        "is_filler": false,
+        "confidence_score": 1.0
+      },
+      {
+        "word_index": 1,
+        "word": "hello",
+        "start_time": 0.424,
+        "end_time": 0.847,
+        "duration": 0.424,
+        "segment_index": 0,
+        "is_filler": false,
+        "confidence_score": 1.0
+      },
+      {
+        "word_index": 2,
+        "word": "my",
+        "start_time": 0.847,
+        "end_time": 1.271,
+        "duration": 0.424,
+        "segment_index": 0,
+        "is_filler": false,
+        "confidence_score": 1.0
+      },
+      {
+        "word_index": 3,
+        "word": "name",
+        "start_time": 1.271,
+        "end_time": 1.694,
+        "duration": 0.424,
+        "segment_index": 0,
+        "is_filler": false,
+        "confidence_score": 1.0
+      },
+      {
+        "word_index": 4,
+        "word": "is",
+        "start_time": 1.694,
+        "end_time": 2.118,
+        "duration": 0.424,
+        "segment_index": 0,
+        "is_filler": false,
+        "confidence_score": 1.0
+      },
+      {
+        "word_index": 5,
+        "word": "Rijim",
+        "start_time": 2.118,
+        "end_time": 2.541,
+        "duration": 0.424,
+        "segment_index": 0,
+        "is_filler": false,
+        "confidence_score": 1.0
+      },
+      {
+        "word_index": 6,
+        "word": "Kumar",
+        "start_time": 2.541,
+        "end_time": 2.965,
+        "duration": 0.424,
+        "segment_index": 0,
+        "is_filler": false,
+        "confidence_score": 1.0
+      },
+      {
+        "word_index": 7,
+        "word": "here",
+        "start_time": 2.965,
+        "end_time": 3.388,
+        "duration": 0.424,
+        "segment_index": 0,
+        "is_filler": false,
+        "confidence_score": 1.0
+      },
+      {
+        "word_index": 8,
+        "word": "are",
+        "start_time": 3.388,
+        "end_time": 3.812,
+        "duration": 0.424,
+        "segment_index": 0,
+        "is_filler": false,
+        "confidence_score": 1.0
+      },
+      {
+        "word_index": 9,
+        "word": "some",
+        "start_time": 3.812,
+        "end_time": 4.235,
+        "duration": 0.424,
+        "segment_index": 0,
+        "is_filler": false,
+        "confidence_score": 1.0
+      },
+      {
+        "word_index": 10,
+        "word": "creative",
+        "start_time": 4.235,
+        "end_time": 4.659,
+        "duration": 0.424,
+        "segment_index": 0,
+        "is_filler": false,
+        "confidence_score": 1.0
+      },
+      {
+        "word_index": 11,
+        "word": "name",
+        "start_time": 4.659,
+        "end_time": 5.082,
+        "duration": 0.424,
+        "segment_index": 0,
+        "is_filler": false,
+        "confidence_score": 1.0
+      },
+      {
+        "word_index": 12,
+        "word": "ideas",
+        "start_time": 5.082,
+        "end_time": 5.506,
+        "duration": 0.424,
+        "segment_index": 0,
+        "is_filler": false,
+        "confidence_score": 1.0
+      },
+      {
+        "word_index": 13,
+        "word": "for",
+        "start_time": 5.506,
+        "end_time": 5.929,
+        "duration": 0.424,
+        "segment_index": 0,
+        "is_filler": false,
+        "confidence_score": 1.0
+      },
+      {
+        "word_index": 14,
+        "word": "your",
+        "start_time": 5.929,
+        "end_time": 6.353,
+        "duration": 0.424,
+        "segment_index": 0,
+        "is_filler": false,
+        "confidence_score": 1.0
+      },
+      {
+        "word_index": 15,
+        "word": "interview",
+        "start_time": 6.353,
+        "end_time": 6.776,
+        "duration": 0.424,
+        "segment_index": 0,
+        "is_filler": false,
+        "confidence_score": 1.0
+      },
+      {
+        "word_index": 16,
+        "word": "business",
+        "start_time": 6.776,
+        "end_time": 7.2,
+        "duration": 0.424,
+        "segment_index": 0,
+        "is_filler": false,
+        "confidence_score": 1.0
+      },
+      {
+        "word_index": 17,
+        "word": "today.",
+        "start_time": 7.2,
+        "end_time": 8.2,
+        "duration": 1.0,
+        "segment_index": 1,
+        "is_filler": false,
+        "confidence_score": 1.0
+      },
+      {
+        "word_index": 18,
+        "word": "Professional",
+        "start_time": 8.2,
+        "end_time": 8.533,
+        "duration": 0.333,
+        "segment_index": 2,
+        "is_filler": false,
+        "confidence_score": 1.0
+      },
+      {
+        "word_index": 19,
+        "word": "and",
+        "start_time": 8.533,
+        "end_time": 8.867,
+        "duration": 0.333,
+        "segment_index": 2,
+        "is_filler": false,
+        "confidence_score": 1.0
+      },
+      {
+        "word_index": 20,
+        "word": "trust",
+        "start_time": 8.867,
+        "end_time": 9.2,
+        "duration": 0.333,
+        "segment_index": 2,
+        "is_filler": false,
+        "confidence_score": 1.0
+      },
+      {
+        "word_index": 21,
+        "word": "over",
+        "start_time": 9.2,
+        "end_time": 9.533,
+        "duration": 0.333,
+        "segment_index": 2,
+        "is_filler": false,
+        "confidence_score": 1.0
+      },
+      {
+        "word_index": 22,
+        "word": "the",
+        "start_time": 9.533,
+        "end_time": 9.867,
+        "duration": 0.333,
+        "segment_index": 2,
+        "is_filler": false,
+        "confidence_score": 1.0
+      },
+      {
+        "word_index": 23,
+        "word": "idea.",
+        "start_time": 9.867,
+        "end_time": 10.2,
+        "duration": 0.333,
+        "segment_index": 2,
+        "is_filler": false,
+        "confidence_score": 1.0
+      }
+    ]
+  },
+  "analysis": {
+    "pauses": [
+      {
+        "start_time": 0.0,
+        "end_time": 1.82,
+        "duration": 1.82
+      },
+      {
+        "start_time": 7.6,
+        "end_time": 8.42,
+        "duration": 0.82
+      }
+    ],
+    "pause_count": 2,
+    "total_pause_duration": 2.64,
+    "fillers": [],
+    "filler_count": 0,
+    "filler_words": []
+  },
+  "segments": [
+    {
+      "id": 0,
+      "seek": 0,
+      "start": 0.0,
+      "end": 7.2,
+      "text": " So hello my name is Rijim Kumar here are some creative name ideas for your interview business",
+      "tokens": [
+        50364,
+        407,
+        7751,
+        452,
+        1315,
+        307,
+        497,
+        1718,
+        332,
+        46500,
+        510,
+        366,
+        512,
+        5880,
+        1315,
+        3487,
+        337,
+        428,
+        4049,
+        1606,
+        50724
+      ],
+      "temperature": 0,
+      "avg_logprob": -0.4048115059181496,
+      "compression_ratio": 1.1363636363636365,
+      "no_speech_prob": 0.3002200424671173
+    },
+    {
+      "id": 1,
+      "seek": 0,
+      "start": 7.2,
+      "end": 8.2,
+      "text": " today.",
+      "tokens": [
+        50724,
+        965,
+        13,
+        50774
+      ],
+      "temperature": 0,
+      "avg_logprob": -0.4048115059181496,
+      "compression_ratio": 1.1363636363636365,
+      "no_speech_prob": 0.3002200424671173
+    },
+    {
+      "id": 2,
+      "seek": 820,
+      "start": 8.2,
+      "end": 10.2,
+      "text": " Professional and trust over the idea.",
+      "tokens": [
+        50364,
+        30011,
+        293,
+        3361,
+        670,
+        264,
+        1558,
+        13,
+        50464
+      ],
+      "temperature": 0,
+      "avg_logprob": -0.7105229377746582,
+      "compression_ratio": 0.8222222222222222,
+      "no_speech_prob": 0.6112192869186401
+    }
+  ],
+  "language_detected": "en"
+}
